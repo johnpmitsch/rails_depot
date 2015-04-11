@@ -28,5 +28,5 @@ Product.create!(title: "Big John's Towel",
     %{<p>
         Are you tired of Towels that just doesn't work?
       </p>},
-  image_url: 'https://lh6.googleusercontent.com/-xpeznYoLMB0/AAAAAAAAAAI/AAAAAAAAABY/3jrxxYde-Ns/photo.jpg?sz=50',
+  image_url: 'https://lh6.googleusercontent.com/-xpeznYoLMB0/AAAAAAAAAAI/AAAAAAAAABY/3jrxxYde-Ns/photo.jpg',
   price: 6999.99)
