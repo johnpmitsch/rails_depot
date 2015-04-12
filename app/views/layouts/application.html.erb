@@ -1,37 +1,39 @@
-<!-- START:head -->
+
 <!DOCTYPE html>
 <html>
 <head>
-<!-- START_HIGHLIGHT -->
-  <title>Pragprog Books Online Store</title>
-<!-- END_HIGHLIGHT -->
-  <!-- <label id="code.slt"/> --><%= stylesheet_link_tag    "application", media: "all",
+  <title>Big John's online store</title>
+  <%= stylesheet_link_tag    "application", media: "all",
     "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %><!-- <label id="code.jlt"/> -->
-  <%= csrf_meta_tags %><!-- <label id="code.csrf"/> -->
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
 </head>
 <!-- END:head -->
 <body class="<%= controller.controller_name %>">
-<!-- START_HIGHLIGHT -->
   <div id="banner">
     <%= image_tag("logo.png") %>
-    <%= @page_title || "Big John's Store" %><!-- <label id="code.depot.e.title"/> -->
+    <%= @page_title || "Pragmatic Bookshelf" %>
   </div>
   <div id="columns">
     <div id="side">
+<!-- START_HIGHLIGHT -->
+    <% if @cart %>
+      <div id="cart">
+        <%= render @cart %>
+      </div>
+    <% end %>
+
+<!-- END_HIGHLIGHT -->
       <ul>
         <li><a href="/">Home</a></li>
-        <li><a href="/faq">Questions</a></li>
-        <li><a href="/news">News</a></li>
-        <li><a href="/contact">Contact</a></li>
+        <li><a href="http://www..../faq">Questions</a></li>
+        <li><a href="http://www..../news">News</a></li>
+        <li><a href="http://www..../contact">Contact</a></li>
       </ul>
     </div>
     <div id="main">
-<!-- END_HIGHLIGHT -->
-      <%= yield %><!-- <label id="code.depot.e.include"/> -->
-<!-- START_HIGHLIGHT -->
+      <%= yield %>
     </div>
   </div>
-<!-- END_HIGHLIGHT -->
 </body>
 </html>
