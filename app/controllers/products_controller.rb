@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  before_action :authorize, only: [:edit, :update, :destroy, :create]
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
   # GET /products
